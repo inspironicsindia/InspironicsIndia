@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px 50px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Four Column Layout</h2>
+<p>Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p>
+
+<div class="row" style='background-image:url(img/fourcolumnimg/bg_blue.png);font-family:Calibri;color:white;'>
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/sensors.png" alt="IoT and Intelligent Sensors" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>IoT and Intelligent Sensors<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/cloud.png" alt="Cloud Computing" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Cloud Computing<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/artificial-intelligence.png" alt="Machine Learning & Digital Twins" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Machine Learning & Digital Twins<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/666.png" alt="AR / VR" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>AR / VR<b></p></center>
+	 </div>
+  </div>
+</div>
+
+<div class="row" style='background-image:url(img/fourcolumnimg/bg_blue.png);font-family:Calibri;color:white;'>
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/wifi.png" alt="IoT and Intelligent Sensors" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Edge Computing & Gateways<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/settings.png" alt="Cloud Computing" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Big Data & Analytics<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/unifiedcomm.png" alt="Machine Learning & Digital Twins" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Mobility & Collaboration<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/robotics.png" alt="AR / VR" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Robotics & AI<b></p></center>
+	 </div>
+  </div>
+</div>
+
+</body>
+</html>

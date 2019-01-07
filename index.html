@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav {
+  overflow: hidden;
+  color:black;
+}
+
+.topnav a {
+  float: left;
+  display: block;  
+  text-align: center;
+   padding: 10px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  vertical-align:middle;
+  line-height:70px;
+  color:#4497c3;
+}
+
+
+.topnav a:hover {
+   border-bottom:2px solid #3b9ecb;
+}
+
+.active {
+  border-bottom:2px solid #3b9ecb;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/*8 column layout css*/
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px 50px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+   .column {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 1000px) 
+{
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+    .topnav.responsive a 
+	{
+		float: none;
+		display: block;  
+		text-align: center;
+		padding: 0px 30px;
+		text-decoration: none;
+		font-size: 17px;
+		color:#4497c3;
+		text-align: left;
+	}
+
+}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+	<a><img src="img/inspironics_logo.png" alt="Inspironics-Logo" width='175px;' height="75px;" style="padding:10px;"></img></a>
+  <a href="#home" class="active">About Us</a>
+  <a href="#news">Connected Enterprise</a>
+  <a href="#contact">Solution Engineering</a>
+  <a href="#about">Contact Us</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="img/carousel1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="img/carousel2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="img/carousel3.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+<!--8 column layout-->
+
+<div class="row" style='background-image:url(img/fourcolumnimg/bg_blue.png);font-family:Calibri;color:white;'>
+	<center><h1 style="padding:20px;">CONNECTED ENTERPRISE</h1></center>
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/sensors.png" alt="IoT and Intelligent Sensors" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>IoT and Intelligent Sensors<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/cloud.png" alt="Cloud Computing" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Cloud Computing<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/artificial-intelligence.png" alt="Machine Learning & Digital Twins" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Machine Learning & Digital Twins<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/666.png" alt="AR / VR" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>AR / VR<b></p></center>
+	 </div>
+  </div>
+</div>
+
+<div class="row" style='background-image:url(img/fourcolumnimg/bg_blue.png);font-family:Calibri;color:white;'>
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/wifi.png" alt="IoT and Intelligent Sensors" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Edge Computing & Gateways<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/settings.png" alt="Cloud Computing" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Big Data & Analytics<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+  <div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/unifiedcomm.png" alt="Machine Learning & Digital Twins" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Mobility & Collaboration<b></p></center>
+	 </div>
+  </div>
+  
+  <div class="column">
+	<div style="border:2px solid white;height:100%;">
+    <center><img src="img/fourcolumnimg/robotics.png" alt="AR / VR" width='125px' height="125px" style="padding:10px;border-radius:50%;"></img>
+    <p><b>Robotics & AI<b></p></center>
+	 </div>
+  </div>
+</div>
+<!--ends here-->
+</body>
+</html>
